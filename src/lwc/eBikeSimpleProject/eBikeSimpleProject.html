@@ -1,0 +1,29 @@
+<template>
+
+    
+    <div class="slds-box slds-theme_shade">
+        <div>Name: {name}</div>
+        <div>Description: {description}</div>
+        <div>Category: {category}</div>
+        <div>Material: {material}</div>
+        <div>Price: {price}</div>
+        <div><img src={pictureUrl} height="100" width="100"/></div>
+        <div align="center">
+            <lightning-button label="Buy" onclick={onBuyClick}></lightning-button>
+        </div>
+        <template for:each={dataRecord} for:item="data">
+           
+              <div key={data.id}>Name:  {data.name}  </div>
+              <div key={data.id}>Description:  {data.description}  </div>
+              <div key={data.id}>Category:  {data.category}  </div>
+              <div key={data.id}>Material:  {data.material}  </div>
+
+              <div key={data.id}> </div> 
+              <div key={data.id}> </div>
+              <div key={data.id}> </div>
+              
+        </template>
+    </div>
+   
+        
+</template>

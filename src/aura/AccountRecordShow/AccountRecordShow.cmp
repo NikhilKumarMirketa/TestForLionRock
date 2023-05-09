@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" 
+                controller="accountRecordShow1">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.myAction}" /> 
+    <aura:attribute name="columns" type="list"/>
+    <aura:attribute name="data" type="object"/>
+	
+    <lightning:card  iconName="standard:account"  title="Account Details" class="slds-var-m-arround_xx-large">
+      
+           <lightning:datatable  
+                   
+                   data="{!v.data}"
+                   columns="{!v.columns}"
+                   hideCheckboxColumn="true"
+                   keyField="Id"
+           />       
+    </lightning:card>
+</aura:component>

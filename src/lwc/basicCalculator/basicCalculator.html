@@ -1,0 +1,18 @@
+<template>   
+    <div class="slds-box">
+        
+        <lightning-input label="Enter FirstNumber" onchange={onChangeInput1}></lightning-input>
+        <lightning-input label="Enter SecondNumber" onchange={onChangeInput2}></lightning-input>       
+        <div align="center"> 
+            <lightning-button label="Sum" onclick={onSumClick}></lightning-button>           
+            <lightning-button label="Subtract" onclick={onSubClick}></lightning-button>
+            <lightning-button label="Multiply"  onclick={onMulClick}></lightning-button>
+        </div>         
+        <template if:true={resultflag}>           
+             <div align="center"> {result} </div>
+        </template> 
+        <template if:false={resultflag}>
+             <div align="center">!!Click button for operation!!</div>
+        </template>
+    </div>
+</template>

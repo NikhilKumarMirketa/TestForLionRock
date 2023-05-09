@@ -1,0 +1,27 @@
+<apex:page sidebar="false" showHeader="false" Controller="AccountSaveVFpage">
+   
+    <apex:form >        
+      <apex:pageBlock >
+           <h1 style="color:sky-blue;font-size:30px;text-align:center;">
+               Account Insert Using Custom Controller
+           </h1>
+         <apex:pageBlockSection title="Account Information" collapsible="false">
+             <apex:inputField value="{!accObj.Name}"/>
+             
+             <apex:inputField value="{!accObj.Type}"/>
+             <apex:inputField value="{!accObj.Industry}"/>
+          </apex:pageBlockSection>
+          <apex:pageBlockSection title="Additional Information" collapsible="false">
+             <apex:inputField value="{!accObj.CustomerPriority__c}"/>
+             <apex:inputField value="{!accObj.NumberofLocations__c}"/>
+             <apex:inputField value="{!accObj.SLAExpirationDate__c}"/>
+          </apex:pageBlockSection>
+           <apex:pageBlockSection title="Description Information" collapsible="false">
+             <apex:inputField value="{!accObj.description}"/>
+          </apex:pageBlockSection>
+          <apex:pageBlockButtons location="bottom">
+             <apex:commandButton value="Save" action="{!accountSave}"/>
+          </apex:pageBlockButtons>
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>
