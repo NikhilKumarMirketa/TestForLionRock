@@ -1,6 +1,5 @@
 public class accounthandler {
 
-    //Add by Nikhil Kumar -----ignore it just for testing
     /*Validation for Phone filed*/
      public void checkPhonefiled(list<account> triggernew,map<id,account> triggeroldmap){        
         for(account accvar:triggernew){
